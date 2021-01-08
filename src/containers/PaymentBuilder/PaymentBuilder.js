@@ -3,7 +3,7 @@ import Payment from "../../components/Payment/Payment";
 import BuildControls from "../../components/Payment/BuildControls/BuildControls";
 
 const PaymentBuilder = () => {
-	const [mode, setMode] = useState('equal');
+	const [mode, setMode] = useState('true');
 
 	const [formEqual, setFormEqual] = useState({
 		people: 0,
@@ -12,18 +12,20 @@ const PaymentBuilder = () => {
 		delivery: 0
 	});
 
-	const [formSelf, setFormSelf] = useState({
-		name: 0,
-		total: 0,
-		percent: 0,
-		delivery: 0
-	});
+	const [formSelf, setFormSelf] = useState([
+		{
+			name: 0,
+			total: 0,
+			percent: 0,
+			delivery: 0
+		}
+	]);
 
 	return (
 		<>
 			<div className="container">
-			<Payment/>
-			<BuildControls/>
+			<Payment />
+			<BuildControls />
 			</div>
 		</>
 	)

@@ -1,10 +1,11 @@
 import React from 'react';
 
-const RadioButton = ({item, mode}) => {
+const RadioButton = ({item}) => {
 	const {id, forLabel, text, value} = item;
 
 	const onRadioChange = e => {
 		const target = e.target.value;
+		console.log(target);
 	}
 	return (
 		<div className="form-check">
@@ -14,7 +15,6 @@ const RadioButton = ({item, mode}) => {
 				name="calcOrder"
 				value={value}
 				onChange={onRadioChange}
-				checked={mode === value}
 				id={id} />
 			<label className="form-check-label" htmlFor={forLabel}>{text}</label>
 		</div>
