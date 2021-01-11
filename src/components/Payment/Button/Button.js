@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Button = () => {
+const Button = ({calculate}) => {
 	return (
-		<div>Button</div>
+		<button type="button" className="btn btn-primary" onClick={calculate}>Рассчитать</button>
 	)
 };
 

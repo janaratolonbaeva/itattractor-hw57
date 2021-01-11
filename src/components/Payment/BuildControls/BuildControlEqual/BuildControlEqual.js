@@ -1,15 +1,16 @@
 import React from 'react';
 
-const BuildControlEqual = ({item}) => {
+const BuildControlEqual = (props) => {
 
 	return (
 		<div className="row mb-3">
-				<label htmlFor="colFormLabel" className="col-sm-4 col-form-label">{item.title}:</label>
-			<div className="col-sm-4">
-				<input type="text" className="form-control" id="colFormLabel" name={item.value} />
+			<div className="col-sm-6 input-group">
+				<label className="col-sm-3 col-form-label">{props.title}:</label>
+				<input type="number" className="form-control" value={props.value} onChange={e => props.onChange(e)} placeholder="0"/>
+				<span className="ms-2">{props.unit}</span>
 			</div>
-			<label htmlFor="colFormLabel" className="col-sm-2 col-form-label">{item.text}</label>
 		</div>
+
 	)
 };
 
